@@ -1,0 +1,25 @@
+CREATE DATABASE `sa01264_musicCataloguer`;
+use `sa01264_musicCataloguer`;
+
+
+DROP TABLE IF EXISTS Song;
+
+CREATE TABLE Song
+(
+    ID int NOT NULL AUTO_INCREMENT,
+	Audio BLOB(65535) NOT NULL,
+	Title VARCHAR(255) NOT NULL,
+	Artist VARCHAR(255) NOT NULL,
+     PRIMARY KEY (ID)
+);	
+
+
+
+DROP TABLE IF EXISTS Album;
+CREATE TABLE Album
+(
+    ID int NOT NULL AUTO_INCREMENT,
+    Path BLOB(65535) NOT NULL,
+    Title VARCHAR(255) NOT NULL,
+    PRIMARY KEY (ID)
+);
